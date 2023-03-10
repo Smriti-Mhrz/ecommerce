@@ -18,14 +18,15 @@
     border-radius: 10px;
     img{
         width: 100% !important;
-        height: 500px !important;
+        height: 600px !important;
         object-fit: cover;
     }
     .js-image-zoom_zoomed-image{
-        left:230px !important;
+        left:50px !important;
         padding: 10px;
         background-color: white;
         border-radius: 10px;
+        z-index: 1000;
     }
 }
 .main-product-image>div{

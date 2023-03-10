@@ -1,7 +1,8 @@
 import React from 'react'
 import './Header.scss'
 import {Link} from 'react-router-dom';
-import {BsSearch,BsMenuUp} from 'react-icons/bs'
+import {BsSearch,BsMenuUp, BsFillCartFill} from 'react-icons/bs'
+import {BiLogOut} from 'react-icons/bi'
 import { NavLink } from 'react-router-dom';
 
 const Header = () => {
@@ -20,11 +21,11 @@ const Header = () => {
         </div>
       </header> */}
       <header className='header-upper py-2'>
-        <div className='container-xxl'>
+        <div className='container'>
           <div className='row align-items-center'>
             <div className='col-2'>
               <h2>
-                <Link className='title'>TechTops</Link>
+                <Link to='/' className='title'>TechTops</Link>
                 </h2>
             </div>
             <div className='col-5'>
@@ -34,17 +35,19 @@ const Header = () => {
               </div>
             </div>
             <div className='col-5'>
-              <div className='header-upper d-flex align-item-center'>
+              <div className='header-upper d-flex align-item-center two-item'>
                <div>
                   <Link to='/cart' className='d-flex align-items-center gap-10 text-black'>
-                 <img src ='image/cart.svg' alt='cart'/>
+                    <BsFillCartFill className='cart'/>
+                 {/* <img src ='image/cart.svg' alt='cart'/> */}
                   <p className='mb-0 cart'>Cart
                    </p>
                   </Link>
                 </div>
                 <div>
                   <a className='d-flex align-items-center gap-10 text-black'>
-                  <img src ='image/cart.svg' alt=''/>
+                    <BiLogOut className='logout'/>
+                  {/* <img src ='image/cart.svg' alt=''/> */}
                   <p className='mb-0 logout'>Logout
                    </p>
                   </a>
@@ -56,7 +59,7 @@ const Header = () => {
         </div>
       </header>
       <header className='header-bottom py-2'>
-        <div className='container-xxl'>
+        <div className='container'>
             <div className='row'>
               <div className='col-12'>
                 <div className='menu-bottom d-flex align-item-center gap-30'>

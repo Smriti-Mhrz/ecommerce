@@ -1,12 +1,14 @@
 import React from 'react'
 import './SingleProduct.scss'
+import { Link } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
 import BreadCrumb from '../../components/BreadCrumb/BreadCrumb'
 import Meta from '../../components/Meta'
-import ReactImageZoom from 'react-image-zoom'
+// import ReactImageZoom from 'react-image-zoom'
 
-const SingleProduct = () => {
-    const props = {width: 400, height: 500, zoomWidth: 500, img: "image/digitalwatch.jpg"};
+const SingleProduct = (props) => {
+    // const props = {width: 400, height: 600, zoomWidth: 600, img: "image/digitalwatch.jpg"};
+    
   return (
     <>
      <Meta title={'Product Name'}/>
@@ -17,15 +19,14 @@ const SingleProduct = () => {
                 <div className='col-6'>
                     <div className='main-product-image'>
                         <div>
-                        <ReactImageZoom {...props} />
+                            <img src='image/laptop.jpg' alt='digitalwatch'/>
+                        {/* <ReactImageZoom {...props} /> */}
                         </div>
                     </div>
-                    <div className='other-product-image d-flex flex-wrap gap-15'>
+                    {/* <div className='other-product-image d-flex flex-wrap gap-15'>
                         <div><img src='image/digitalwatch.jpg' alt=''/></div>
                         <div><img src='image/digitalwatch.jpg' alt=''/></div>
-
-
-                    </div>
+                    </div> */}
                 </div>
                     <div className='col-6'>  
                     <div className='main-product-details'>
@@ -59,16 +60,24 @@ const SingleProduct = () => {
                             <div className='d-flex gap-10 align-items-center my-2'>
                                 <h3 className='product-heading'>Tags:</h3><p className='product-data'>Watch  </p>
                             </div>
-                            <div className='d-flex gap-10 flex-row mt-2 mb-3'>
+                            <div className='d-flex gap-15 align-items-center flex-row mt-2 mb-3'>
                                 <h3 className='product-heading'>Quantity:</h3>
                                 <div className=''>
                                     <input type='number' className='form-control' min={1} max={10} style={{width:'70px'}}/>
                                 </div>
-                                <div className='d-flex align-items-center gap-30'>
-                                    <button className='button border-0' type='submit'>Add to cart</button>
-                                    <button className='button border-0' type='submit'>Buy Now</button>
+                                <div className='d-flex align-items-center gap-30 ms-5'>
+                                    <Link to='/cart'><button className='button border-0' type='submit' >Add to cart</button></Link>
+                                    <Link to='/checkout'><button className='button border-0' type='submit'>Buy Now</button></Link>
 
-                                </div>
+                                </div>                                
+                            </div>
+                            <div className='col-12'>
+                                <h4>Description</h4>
+                                    <div className='bg-white p-3'>
+                                    <p>
+                                        description of the product is right here, details quality of the product is described here along with its photo
+                                    </p>
+                                    </div>
                             </div>
                         </div>
                     </div>             
@@ -76,7 +85,7 @@ const SingleProduct = () => {
             </div>
         </div>
     </div>
-    <div className='description-wrapper py-5 home-wrapper-2'>
+    {/* <div className='description-wrapper py-5 home-wrapper-2'>
         <div className='container'>
             <div className='row'>
                 <div className='col-12'>
@@ -89,8 +98,7 @@ const SingleProduct = () => {
                 </div>
             </div>
         </div>
-    </div>
-   
+    </div> */}   
     </>
   )
 }

@@ -13,10 +13,19 @@
       box-shadow: none;
       border-color:inherit;
   }
+  .cart{
+    height: 30px;
+    width: 30px;
+  }
+  .logout{
+    height: 30px;
+    width: 30px;
+  }
   
   .header-upper{
     background-color: $color2;
     width: 100%;
+    
     border-bottom:1px solid rgb(250, 247, 247);
     justify-content: flex-end;
     .title{
@@ -39,11 +48,18 @@
     .logout{
       color:$color1;
       text-decoration: none;
+      cursor: pointer;
+    }
+    .two-item{
+      position: absolute;
+      top: -13px;
+      left: 50px;
     }
   }
-.header-bottom{
-  background-color: $color2;
-  border-top: 1px solid rgb(177, 175, 175);    
+  .header-bottom{
+    background-color: $color2;
+    // border-top: 1px solid rgb(177, 175, 175);    
+     border-top: 1px solid #c3cbce;
 }
 
   .header-bottom .menu-links a{

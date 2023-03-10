@@ -108,7 +108,7 @@ const HomePage = () => {
           <div className='col-12'>
             <h3 className='section-heading'>Featured Collection</h3>
           </div>
-            <ProductCard/>
+            <ProductCard img="image/tablet.jpg"/>
             <ProductCard/>
             <ProductCard/>
             <ProductCard/>

@@ -19,7 +19,7 @@ const Footer = () => {
       <div className='container'>
         <div className='row'>
           <div className='col-3 text-white mb-4'>
-            <h4>Contact Us</h4>
+            <a href="/contact"><h4>Contact Us</h4></a>
             <div>
               <address className='text-white fs-5'>
                 TechTops,<br/> NewRoad, Kathmandu<br/> (opposite to peanuts)

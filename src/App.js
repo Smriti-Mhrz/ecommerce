@@ -7,8 +7,9 @@ import HomePage from "./pages/HomePage/HomePage"
 import Contact from './pages/Contact/Contact';
 import OurStore from './pages/OurStore/OurStore';
 import SingleProduct from './pages/SingleProduct/SingleProduct';
+import Cart from './components/Cart';
 // import SignUp from './pages/SignUp';
-// import NavBar from './components/NavBar/NavBar';
+
 
 
 const App = () => {
@@ -20,10 +21,10 @@ const App = () => {
         <Route index element={<HomePage/>} />
         <Route exact path='product' element={<OurStore/>}/>
         <Route exact path='product/:id' element={<SingleProduct/>}/>
-        <Route exact path='contact' element={<Contact/>}/>
-
-        </Route>        
-        {/* <NavBar/> */}
+        <Route exact path='/contact' element={<Contact/>}/>
+        <Route exact path='/cart' element={<Cart/>}/>
+          
+        </Route>               
       </Routes>
       </BrowserRouter>
     </div>
